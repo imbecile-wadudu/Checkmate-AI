@@ -1,16 +1,30 @@
-# React + Vite
+# Checkmate AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Checkmate AI is a beautiful, interactive N-Queens visualizer that brings backtracking algorithms to life. It features real-time search animations, a manual "Puzzle Mode" for interactive solving, and a "Solution Vault" for exploring optimal chess patterns, all wrapped in a gorgeous glassmorphic UI with integrated code tracking.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Live Algorithm Visualization**: Watch the backtracking algorithm explore the board in real-time.
+- **Puzzle Mode**: Place queens manually and see conflict detection in action.
+- **Solution Vault**: Store and review multiple N-Queens solutions.
+- **Performance Tracking**: Monitor steps, backtracks, and execution time.
+- **Audio Feedback**: Synthetic sound effects for different algorithm events.
+- **Premium UI**: Modern glassmorphic design built with React, Vite, Framer Motion, and Tailwind CSS.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+

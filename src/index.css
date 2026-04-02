@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-surface: #121212;
+  --color-primary: #00f2ff;
+  --color-secondary: #7000ff;
+  --color-accent: #ff007a;
+  --color-success: #00ff88;
+  --color-error: #ff3333;
+
+  --font-sans: "Inter", "Poppins", system-ui, sans-serif;
+
+  --radius-glass: 12px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans antialiased overflow-hidden;
+    background: radial-gradient(circle at center, #1a1033 0%, #050505 100%);
+  }
+}
+
+@utility glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-glass shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+}
+
+@utility neon-border {
+  @apply border-primary/50 shadow-[0_0_15px_rgba(0,242,255,0.3)];
+}
+
+@utility neon-text-primary {
+  @apply text-primary drop-shadow-[0_0_8px_rgba(0,242,255,0.8)];
+}
+
+@utility neon-text-secondary {
+  @apply text-secondary drop-shadow-[0_0_8px_rgba(112,0,255,0.8)];
+}
+
+@utility neon-text-accent {
+  @apply text-accent drop-shadow-[0_0_8px_rgba(255,0,122,0.8)];
+}
+
+@utility btn-primary {
+  @apply px-6 py-2 bg-primary/10 border border-primary text-primary rounded-full hover:bg-primary hover:text-black transition-all duration-300;
+  border-color: rgba(0, 242, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+@utility btn-secondary {
+  @apply px-6 py-2 bg-secondary/10 border border-secondary text-secondary rounded-full hover:bg-secondary hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(112,0,255,0.3)];
+}
+
+@utility chessboard-tile {
+  @apply w-full h-full transition-all duration-200;
+}
+
+@utility tile-dark {
+  @apply bg-surface/80;
+}
+
+@utility tile-light {
+  @apply bg-white/5;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-surface;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/20 rounded-full hover:bg-primary/40;
+}
